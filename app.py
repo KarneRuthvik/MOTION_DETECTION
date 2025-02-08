@@ -69,7 +69,7 @@ def detect_motion_and_duplicate(video_path, output_path):
                         frame[y:y+h, x-w:x] = duplicate
                         
                         # Add text to the duplicated object
-                        cv2.putText(frame, "Duplicated", (x-w, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                        cv2.putText(frame, "Detected", (x-w, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
         
         # Write the frame to the output video
         out.write(frame)
